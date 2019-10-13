@@ -33,7 +33,10 @@ string to_decimal(int n, int d) {
 		rem = rem % d; 
 	} 
 
-	return (rem == 0)? "" : res.substr(m[rem]); 
+        if (rem == 0) 
+		return "";
+
+        return res.substr(m[rem]);
 } 
 
 int main() {
