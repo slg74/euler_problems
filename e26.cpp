@@ -42,7 +42,6 @@ string to_decimal(int n, int d) {
 int main() {
 	int n = 1;
 	int d;
-
 	int max = 0;
 
 	for (d = 1; d <= 1000; d++) {
