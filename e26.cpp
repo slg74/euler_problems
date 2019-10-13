@@ -8,7 +8,7 @@ using namespace std;
 // This function returns repeating sequence of 
 // a fraction. If repeating sequence doesn't 
 // exits, then returns empty string 
-string fractionToDecimal(int numr, int denr) 
+string to_decimal(int n, int d) 
 { 
 	string res; // Initialize result 
 
@@ -18,41 +18,39 @@ string fractionToDecimal(int numr, int denr)
 	// position for cases like 1/6. In this case, 
 	// the recurring sequence doesn't start from first 
 	// remainder. 
-	map <int, int> mp; 
-	mp.clear(); 
+	map <int, int> m; 
+	m.clear(); 
 
 	// Find first remainder 
-	int rem = numr%denr; 
+	int rem = n % d; 
 
 	// Keep finding remainder until either remainder 
 	// becomes 0 or repeats 
-	while ( (rem!=0) && (mp.find(rem) == mp.end()) ) 
+	while ( (rem!=0) && (m.find(rem) == m.end()) ) 
 	{ 
-		mp[rem] = res.length(); 
+		m[rem] = res.length(); 
 		rem = rem*10; 
-		int res_part = rem / denr; 
+		int res_part = rem / d; 
 		res += to_string(res_part); 
-		rem = rem % denr; 
+		rem = rem % d; 
 	} 
 
-	return (rem == 0)? "" : res.substr(mp[rem]); 
+	return (rem == 0)? "" : res.substr(m[rem]); 
 } 
 
-// Driver code 
 int main() 
 { 
-	int numr = 1;
-	int denr;
+	int n = 1;
+	int d;
 
 	int max = 0;
 
-	for (denr = 1; denr <= 1000; denr++) {
-
-	    string res = fractionToDecimal(numr, denr); 
+	for (d = 1; d <= 1000; d++) {
+	    string res = to_decimal(n, d); 
 	    if (res == "") 
 		;
 	    else
-		cout << denr << " :  " << res << " : " << res.size() << "\n"; 
+		cout << d << " :  " << res << " : " << res.size() << "\n"; 
 	        if (res.size() >= max) 
 			max = res.size();
 	}
