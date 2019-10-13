@@ -1,4 +1,5 @@
 // C++ program to find repeating sequence in a fraction 
+// source borrowed and slightly modified from https://www.geeksforgeeks.org/find-recurring-sequence-fraction/
 #include <iostream>
 #include "/Users/scottg/euler_problems/stdc++.h"
 
