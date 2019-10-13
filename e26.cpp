@@ -8,8 +8,7 @@ using namespace std;
 // This function returns repeating sequence of 
 // a fraction. If repeating sequence doesn't 
 // exits, then returns empty string 
-string to_decimal(int n, int d) 
-{ 
+string to_decimal(int n, int d) {
 	string res; // Initialize result 
 
 	// Create a map to store already seen remainders 
@@ -26,8 +25,7 @@ string to_decimal(int n, int d)
 
 	// Keep finding remainder until either remainder 
 	// becomes 0 or repeats 
-	while ( (rem!=0) && (m.find(rem) == m.end()) ) 
-	{ 
+	while ( (rem!=0) && (m.find(rem) == m.end()) ) {
 		m[rem] = res.length(); 
 		rem = rem*10; 
 		int res_part = rem / d; 
@@ -38,8 +36,7 @@ string to_decimal(int n, int d)
 	return (rem == 0)? "" : res.substr(m[rem]); 
 } 
 
-int main() 
-{ 
+int main() {
 	int n = 1;
 	int d;
 
