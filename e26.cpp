@@ -1,19 +1,16 @@
-// source borrowed and slightly modified from https://www.geeksforgeeks.org/find-recurring-sequence-fraction/
 #include <iostream>
 #include "/Users/scottg/euler_problems/stdc++.h"
 
 using namespace std; 
 
 string to_decimal(int n, int d) {
-	string res; // Initialize result 
+	string res; 
 
 	map <int, int> m; 
 	m.clear(); 
 
 	int rem = n % d; 
 
-	// Keep finding remainder until either remainder 
-	// becomes 0 or repeats 
 	while ( (rem!=0) && (m.find(rem) == m.end()) ) {
 		m[rem] = res.length(); 
 		rem = rem*10; 
