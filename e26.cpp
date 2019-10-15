@@ -33,13 +33,13 @@ int main() {
     for (d = 1; d <= 1000; d++) {
         string res = to_decimal(n, d); 
         if (res == "") 
-        ;
+            ;
         else
-        cout << d << " :  " << res << " : " << res.size() << "\n"; 
+            cout << d << " :  " << res << " : " << res.size() << "\n"; 
             if (res.size() >= max) 
-            max = res.size();
+                max = res.size();
     }
-        cout << "Longest recurring cycle: " << max <<  "\n"; 
+    cout << "Longest recurring cycle: " << max <<  "\n"; 
 
     return 0; 
 } 
