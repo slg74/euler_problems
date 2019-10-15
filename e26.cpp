@@ -36,12 +36,10 @@ int main() {
         if (res == "") 
             ;
         else
-            //cout << d << " :  " << res << " : " << res.size() << "\n"; 
             if (res.size() >= max) 
                 max = res.size();
     }
 
-    // slow linear search, we don't want to print them all. refactor this.
     for (d = 1; d <= 1000; d++) {
         string res = to_decimal(n, d);
         if (res.size() == max)
