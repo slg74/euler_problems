@@ -1,5 +1,5 @@
 #include <iostream>
-#include "/Users/scottg/euler_problems/stdc++.h"
+#include "/home/scottg/euler_problems/stdc++.h"
 
 using namespace std; 
 
@@ -19,10 +19,10 @@ string to_decimal(int n, int d) {
 		rem = rem % d; 
 	} 
 
-        if (rem == 0) 
+    if (rem == 0) 
 		return "";
 
-        return res.substr(m[rem]);
+    return res.substr(m[rem]);
 } 
 
 int main() {
