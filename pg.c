@@ -4,6 +4,8 @@
 #include <stdint.h>
 #include <time.h>
 
+/* pg.c - find prime gaps from 0 - ULLONG_MAX */
+
 int is_prime(uint64_t n); 
 uint64_t prime_distance(uint64_t prev, uint64_t curr);
 
