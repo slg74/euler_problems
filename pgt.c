@@ -9,7 +9,7 @@
 
 /* pg.c - find prime gaps from 0 - ULLONG_MAX */
 
-int is_prime(uint64_t n); 
+int is_prime(uint64_t n);
 uint64_t prime_distance(uint64_t prev, uint64_t curr);
 void *mt_prime_gap(void *thread_id); 
 
@@ -17,9 +17,12 @@ int main() {
     pthread_t threads[NUM_THREADS];
     int i;
     int rc;
+
     for (i=0; i<NUM_THREADS; i++) {
-        rc = pthread_create(&threads[i], NULL, mt_prime_gap, (void *)i); 
+        //rc = pthread_create(&threads[i], NULL, mt_prime_gap, (void *)i); 
+        rc = pthread_create(&threads[i], NULL, mt_prime_gap, NULL); 
     }
+
     pthread_exit(NULL); 
 }
 
